@@ -2,7 +2,7 @@ from datetime import datetime,timedelta
 from random import randint
 import re
 
-#previous commit is with some makeshift tests (just print(), without assert)
+#one of previous commits is with some makeshift tests (just print(), without assert)
 
 # task 1
 
