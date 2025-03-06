@@ -12,12 +12,12 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
 
   try:
     if  1 <= min < max and min < max <= 1000 and min <= quantity <= max: #oops, my bad. changed to min/max values
-      # result = set()
-      # while len(result) != quantity:
-      #   result.add(randint(min, max))
-      # # return sorted(list(result))
+      result = set()
+      while len(result) != quantity:
+        result.add(randint(min, max))
+      # return sorted(list(result))
 
-      return sorted(sample(range(min, max), quantity)) #other way of solving
+      # return sorted(sample(range(min, max), quantity)) #other way of solving
     
     else: 
       return []
