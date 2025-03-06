@@ -2,6 +2,8 @@ from datetime import datetime,timedelta
 from random import randint
 import re
 
+#previous commit is with some makeshift tests (just print(), without assert)
+
 # task 1
 
 def get_days_from_today(date=None):
@@ -14,13 +16,6 @@ def get_days_from_today(date=None):
   except (ValueError, TypeError):
     return 'Date should be in this format : YYYY-MM-DD'
   
-
-# print(get_days_from_today('2025-03-03'))
-# print(get_days_from_today('df'))
-# print(get_days_from_today(23))
-# print(get_days_from_today(True))
-# print(get_days_from_today('2025-02-30'))
-# print(get_days_from_today())
 
 # task 2
 
@@ -44,34 +39,9 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
     print(error) #do I need to print error? 
     return []
 
-# print(get_numbers_ticket())
-# print(get_numbers_ticket(2,36,7)) #correct
-# print(get_numbers_ticket('1','1000','3'))
-# print(get_numbers_ticket('1',1000,'3'))
-# print(get_numbers_ticket(1001,1000,3)) 
-# print(get_numbers_ticket(1,1,3)) 
-# print(get_numbers_ticket(True, '1000', 32))
-# print(get_numbers_ticket(1, 32, True)) 
-# print(get_numbers_ticket([], [],[]))
-
-
 #task 3
 
 #delete test list
-
-# raw_numbers = [
-#     "067\\t123 4567",
-#     "(095) 234-5678\\n",
-#     "+380 44 123 4567",
-#     "380501234567",
-#     "    +38(050)123-32-34",
-#     "     0503451234",
-#     "(050)8889900",
-#     "38050-111-22-22",
-#     "38050 111 22 11   ",
-#     "37050-111-22-22",
-#     'dggdf',
-# ]
 
 def normalize_phone(num: str):
   pattern = r'[^+\d]'
@@ -87,17 +57,8 @@ def normalize_phone(num: str):
     case _:
       return 'Phone format is invalid'
 
-# sanitized_numbers = [normalize_phone(num) for num in raw_numbers]
-# print("Нормалізовані номери телефонів для SMS-розсилки:", sanitized_numbers)
 
 #task 4
-
-# users = [
-#     {"name": "John Doe", "birthday": "1985.01.23"},
-#     {"name": "Jane Smith", "birthday": "1990.01.27"},
-#     {"name": "Jane Smith", "birthday": "1990.03.09"}
-
-# ]
 
 def get_upcoming_birthdays(users: list):
   day_today = datetime.today().date()
@@ -122,8 +83,3 @@ def get_upcoming_birthdays(users: list):
         'congratulation_date': congrats_day.strftime("%Y-%m-%d")
       })
   return upcoming_birthdays
-
-
-# upcoming_birthdays = get_upcoming_birthdays(users)
-# print("Список привітань на цьому тижні:", upcoming_birthdays)
-# print(datetime.today())
