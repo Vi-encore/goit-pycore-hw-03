@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, sample
 
 # task 2
 
@@ -12,10 +12,13 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
 
   try:
     if  1 <= min < max and min < max <= 1000 and min <= quantity <= max: #oops, my bad. changed to min/max values
-      result = set()
-      while len(result) != quantity:
-        result.add(randint(min, max))
-      return sorted(list(result))
+      # result = set()
+      # while len(result) != quantity:
+      #   result.add(randint(min, max))
+      # # return sorted(list(result))
+
+      return sorted(sample(range(min, max), quantity)) #other way of solving
+    
     else: 
       return []
   except (ValueError, TypeError) as error:
@@ -24,7 +27,7 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
 
 
 # print(get_numbers_ticket())
-# print(get_numbers_ticket(2,36,7)) #correct
+# print(get_numbers_ticket(2,36,3)) #correct
 # print(get_numbers_ticket('1','1000','3'))
 # print(get_numbers_ticket('1',1000,'3'))
 # print(get_numbers_ticket(1001,1000,3)) 
