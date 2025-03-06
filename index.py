@@ -34,7 +34,7 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
         result.add(randint(min, max))
       return sorted(list(result))
     else: 
-      return 'Min should be greater or equal to 1\nMax should be lesser or equal to 1000\nQuantity should be between min and max'
+      return []
   except (ValueError, TypeError):
     return 'You did not provide correct type of value'
 
@@ -47,3 +47,6 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
 # print(get_numbers_ticket(True, '1000', 32))
 # print(get_numbers_ticket(1, 32, True))
 # print(get_numbers_ticket([], [],[]))
+
+
+#task 3
