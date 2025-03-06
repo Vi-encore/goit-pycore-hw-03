@@ -11,7 +11,7 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
       return []
 
   try:
-    if  1 <= min < max and min < max <= 1000 and 1 <= quantity <= 1000:
+    if  1 <= min < max and min < max <= 1000 and min <= quantity <= max: #oops, my bad. changed to min/max values
       result = set()
       while len(result) != quantity:
         result.add(randint(min, max))
