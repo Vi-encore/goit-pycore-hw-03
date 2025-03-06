@@ -36,12 +36,10 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
     else: 
       return []
   except (ValueError, TypeError) as error:
-    print(error) #do I need to print error? 
+    print(error) #do I need to print an error? 
     return []
 
 #task 3
-
-#delete test list
 
 def normalize_phone(num: str):
   pattern = r'[^+\d]'
