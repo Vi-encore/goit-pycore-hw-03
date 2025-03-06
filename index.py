@@ -70,6 +70,7 @@ def get_numbers_ticket(min=None, max=None, quantity=None):
 #     "38050-111-22-22",
 #     "38050 111 22 11   ",
 #     "37050-111-22-22",
+#     'dggdf',
 # ]
 
 def normalize_phone(num: str):
